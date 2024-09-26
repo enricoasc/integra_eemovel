@@ -114,13 +114,13 @@ class importacao_eemovel:
        
         for campanha in self.lista_campanha_ativa:
             api_url4 = self.api_urlS.replace('XXXXX',str(campanha))
-            r4 = requests.put(api_url4, headers=self.headers)
+            # r4 = requests.put(api_url4, headers=self.headers)
 
-            if r4.status_code != 200:
-                ntf().envia(f'''Erro de execução  
-                            \nClasse : {self.__class__.__name__} 
-                            \nFunção : {inspect.currentframe().f_code.co_name}  
-                            \nErro   : {r4.text}''')                
+            # if r4.status_code != 200:
+            #     ntf().envia(f'''Erro de execução  
+            #                 \nClasse : {self.__class__.__name__} 
+            #                 \nFunção : {inspect.currentframe().f_code.co_name}  
+            #                 \nErro   : {r4.text}''')                
 
 
 
